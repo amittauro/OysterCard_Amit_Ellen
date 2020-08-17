@@ -1,0 +1,27 @@
+Nouns:
+- money
+- card
+- fare
+- journey/trip
+- station/zone
+- penalty
+- zone
+
+Verbs:
+- add
+- deduct
+- touch in
+- touch out
+
+card as an array
+push money into array
+card capacity
+set fare / fare popped from array
+check for touch_in and touch_out
+min_capacity set for single journey
+when touch_out, pop fare
+entry_station / exit_station
+journey_check
+zone as an array?
+if doesn't touch_out => penalty popped from card / set penalty
+correct fare: zone/station
