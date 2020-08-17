@@ -1,27 +1,21 @@
 Nouns:
-- money
-- card
-- fare
-- journey/trip
-- station/zone
-- penalty
-- zone
+- card(money) => .add(sum) / money + sum <= MAX_VALUE: added / money + sum > MAX_VALUE: return err message
+=> .deduct(fare) #private
+=> .touch_in(station) / enough money: journey.new  #money on card >= MIN_FARE £3
+ / not enough money: return err message / current_journey not completed: end journey 
+ without passing a station and deduct the fare for that journey and store that journey 
+ before it can start a new one
+=> .touch_out(station) / end journey / .deduct(fare) / store recorded_journey
+=> MAX_VALUE
+=> @current_journey / @completed_journies
+=> .pretty_prints_journies: returns a line per journey showing start_point, end_point and fare
 
-Verbs:
-- add
-- deduct
-- touch in
-- touch out
+- journey(start_point, end_point, fare) => MIN_FARE  
+=> .end(station) / there is a start_point: calculate the fare / there isn't a start_point: use penalty fare
+=> .fare returns the value of the fare
+=> (difference between zones + 1) x 3
 
-card as an array
-push money into array
-card capacity
-set fare / fare popped from array
-check for touch_in and touch_out
-min_capacity set for single journey
-when touch_out, pop fare
-entry_station / exit_station
-journey_check
-zone as an array?
-if doesn't touch_out => penalty popped from card / set penalty
-correct fare: zone/station
+- station(zone)
+=> .zone returns the zone of the station
+
+- penalty => £15
