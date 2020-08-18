@@ -18,6 +18,10 @@ class Card
     @balance = money
   end
 
+  def touch_in(station)
+    station.name
+  end
+
   private
 
   def too_much?(money)

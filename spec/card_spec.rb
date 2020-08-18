@@ -26,4 +26,14 @@ describe 'Card' do
     # verify
     expect(card.add(100)).to eq 'You can only top up to £90 maximum'
   end
+
+  it 'touches in to start a journey' do
+    # set up
+    card = Card.new
+    station = test_double('Kings Cross')
+    allow(station).to receive(:name) { 'Kings Cross' }
+    #
+    # verify
+    expect(card.touch_in(station)).to eq 'Kings Cross'
+  end
 end
