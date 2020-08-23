@@ -14,13 +14,26 @@ In order to pay for my journey
 As a customer
 I need my fare deducted from my card
 
+objects | messages
+
+constant fare = 3
+deduct
+
 In order to get through the barriers
 As a customer
 I need to touch in and out
 
+object | messages
+card | touch_out ()
+
+
 In order to pay for my journey
 As a customer
 I need to have the minimum amount for a single journey
+
+objects | messages
+
+
 
 In order to pay for my journey
 As a customer
@@ -45,4 +58,3 @@ I need a penalty charge deducted if I fail to touch in or out
 In order to be charged the correct amount
 As a customer
 I need to have the correct fare calculated
-

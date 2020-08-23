@@ -36,4 +36,33 @@ describe 'Card' do
     # verify
     expect(card.touch_in(station)).to eq 'Kings Cross'
   end
+
+  it 'deducts the fare' do
+    # set up
+    card = Card.new
+    card.add(10)
+    # execute
+    card.deduct
+    # verify
+    expect(card.balance).to eq 7
+  end
+
+  it 'touches out' do
+    # set up
+    card = Card.new
+    # execute
+    station = test_double('Bank')
+    allow(station).to receive(:name) { 'Bank' }
+    # verify
+    expect(card.touch_out(station)).to eq 'Bank'
+  end
+
+  it 'checks for minimum card amount' do
+    # set up
+    card = Card.new
+    card.add(3)
+    # verify
+    expect(card.min_amount).to eq true
+  end
+
 end
