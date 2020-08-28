@@ -49,6 +49,7 @@ As a customer
 I need to know where I've travelled from
 
 objects | messages
+card | touched_in_at
 
 
 In order to know where I have been
@@ -56,16 +57,28 @@ As a customer
 I want to see to all my previous trips
 
 objects | messages
+card | journey_history
 
 
 In order to know how far I have travelled
 As a customer
 I want to know what zone a station is in
 
+objects | messages
+station | zone
+
+
 In order to be charged correctly
 As a customer
 I need a penalty charge deducted if I fail to touch in or out
 
+objects | messages
+card | touch_in, touch_out 
+
+
 In order to be charged the correct amount
 As a customer
 I need to have the correct fare calculated
+
+objects | messages
+card | touch_out {calculate a fare}
