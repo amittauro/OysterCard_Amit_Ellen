@@ -32,6 +32,8 @@ As a customer
 I need to have the minimum amount for a single journey
 
 objects | messages
+card
+(const: min amount (3))
 
 
 
@@ -39,13 +41,22 @@ In order to pay for my journey
 As a customer
 I need to pay for my journey when it's complete
 
+objects | messages
+card | touch_out
+
 In order to pay for my journey
 As a customer
 I need to know where I've travelled from
 
+objects | messages
+
+
 In order to know where I have been
 As a customer
 I want to see to all my previous trips
+
+objects | messages
+
 
 In order to know how far I have travelled
 As a customer
